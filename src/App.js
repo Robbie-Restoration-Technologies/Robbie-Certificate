@@ -2,21 +2,38 @@ import PropTypes from "prop-types";
 import './App.css';
 import MiniCard from './components/miniCard/miniCard'
 import { ReactComponent as RobbieLogo } from './RobbieGray.svg'
+import { ReactComponent as BackgrounndMask } from './RobbieGray.svg'
 
-const emergencyTime = 20
-
-function App({ headline, backgroundImage, address, postalCode, claimNumber, startDate, endDate, emergencyTime, dryingTime, totalEnergy, totalAreas, totalEnergyCost }) {
+function App({ headline,
+  address,
+  postalCode,
+  claimNumber,
+  startDate,
+  endDate,
+  emergencyTime,
+  dryingTime,
+  totalEnergy,
+  totalAreas,
+  totalEnergyCost,
+  robbieCertificateNumber,
+}) {
   return (
-    <div className="App" style={{ backgroundImage: `url('${backgroundImage}')` }}>
+    <div className="App">
       <div className="logo">
         <RobbieLogo></RobbieLogo>
       </div>
-      <h4>{headline}</h4>
-      <div>Address: {address}</div>
-      <div>Postal Code: {postalCode}</div>
-      <div>Claim Number: {claimNumber}</div>
-      <div>Start Date: {startDate}</div>
-      <div>End Date: {endDate}</div>
+      <div className="headline">
+        {headline}
+      </div>
+      <div className="generalDataGrid">
+
+        <div>Address: {address}</div>
+        <div>Postal Code: {postalCode}</div>
+        <div>Claim Number: {claimNumber}</div>
+        <div>Start Date: {startDate}</div>
+        <div>End Date: {endDate}</div>
+      </div>
+
 
       <div className="generals">
         <MiniCard cardTitle="Number of Areas" cardValue={totalAreas} />
@@ -26,6 +43,14 @@ function App({ headline, backgroundImage, address, postalCode, claimNumber, star
         <MiniCard cardTitle="Total Energy Cost" cardValue={totalEnergyCost} cardUnits="CAD" />
       </div>
 
+      <div className="footer">
+      <div className="rcn">RCN: {robbieCertificateNumber}</div>
+      <div className="incDetails">
+        <div>Robbie Restoration Technologies Inc.</div>
+        <div>1040 Martin Grove Rd Etobicoke, Ontario, Cananda</div>
+      </div>
+      </div>
+     
     </div>
   );
 }

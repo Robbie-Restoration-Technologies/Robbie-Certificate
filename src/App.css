@@ -13,6 +13,10 @@ html,body {
 
 .App {
   border: black 1px solid;
+  padding-left: 2cm;
+  padding-top: 2cm;
+  padding-bottom: 0.5cm;
+  padding-right: 2cm;
   width: 22cm;
   height: 28cm;
   position: absolute;
@@ -20,7 +24,6 @@ html,body {
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -28,6 +31,8 @@ html,body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url("BackgorundMask.svg");
+  
 }
 
 h1 {
@@ -42,6 +47,57 @@ h1 {
 }
 
 .generals{
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 0.5cm;
+  column-gap: 0.5cm;
+  margin-bottom: 1cm;
+}
+
+.logo {
+  text-align: left;
+  align-self: start;
+  margin-bottom: 0.5cm;
+}
+
+.headline{
+  font-size: 28px ;
+  font-weight: bold;
+  text-align: left;
+  align-self: flex-start;
+  margin-bottom: 0.5cm;
+
+}
+
+.generalDataGrid{
+  width: 100%;
+  align-self: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: start;
+  row-gap: 0.3cm;
+  column-gap: 0.5cm;
+  margin-bottom: 1cm;
+}
+
+.footer{
+  position: absolute;
+  bottom: 1cm;
+  left: 1cm;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.incDetails{
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);  
+}
+
+.rcn{
+  color: #919699b6;
+  font-size: 14px;
 }
