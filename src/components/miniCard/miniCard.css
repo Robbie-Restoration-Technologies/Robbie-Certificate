@@ -1,0 +1,40 @@
+.card {
+  background-color: #f7f9fa;
+  border-radius: 16px;
+  height: 250px;
+  width: 250px;
+  position: relative;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  margin-right: 2rem;
+}
+
+.cardTitle {
+
+  position: relative;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+}
+
+.cardBottom{
+  margin: 1rem;
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  width: 80%;
+}
+
+.cardValue {
+  flex: 1;
+  text-align: left;
+  font-size: 48px;
+  color: #069697;
+}
+
+.cardUnits {
+  text-align: left;
+  align-self: flex-end;
+  font-size: 28px;
+  color: #069697;
+}
