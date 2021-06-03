@@ -3,7 +3,14 @@ import './App.css';
 import MiniCard from './components/miniCard/miniCard'
 import { ReactComponent as RobbieLogo } from './RobbieGray.svg'
 import { ReactComponent as BackgrounndMask } from './RobbieGray.svg'
+import moment from "moment";
 
+let areas = [
+  {
+    area: "28",
+    name: "lol"
+  }
+]
 function App({ headline,
   address,
   postalCode,
@@ -16,7 +23,10 @@ function App({ headline,
   totalAreas,
   totalEnergyCost,
   robbieCertificateNumber,
+  areas,
 }) {
+
+  console.log(areas)
   return (
     <div className="App">
       <div className="logo">
@@ -42,15 +52,26 @@ function App({ headline,
         <MiniCard cardTitle="Total Energy Consumption" cardValue={totalEnergy} cardUnits="Kwh" />
         <MiniCard cardTitle="Total Energy Cost" cardValue={totalEnergyCost} cardUnits="CAD" />
       </div>
+      <div>
+          <table border="1" align="center" cellpadding="5px">
+            <tbody>
+            <tr>
+              <td align="right">Area</td>
+              {areas.map((area) => (
+                <td key={areas.area}>{areas.name}</td>            
+              ))}
+            </tr>
+            </tbody>
+          </table>
+        </div>
 
       <div className="footer">
       <div className="rcn">RCN: {robbieCertificateNumber}</div>
       <div className="incDetails">
         <div>Robbie Restoration Technologies Inc.</div>
-        <div>1040 Martin Grove Rd Etobicoke, Ontario, Cananda</div>
+        <div>1040 Martin Grove Rd Etobicoke, Ontario, Cananda.</div>
       </div>
       </div>
-     
     </div>
   );
 }
@@ -75,7 +96,6 @@ App.defaultProps = {
   totalEnergy: '0.0',
   totalAreas: '0',
   totalEnergyCost: '0.00',
-
 }
 
 export default App;
