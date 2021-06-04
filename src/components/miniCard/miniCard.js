@@ -3,14 +3,14 @@ import './miniCard.css'
 function MiniCard({ cardTitle, cardValue, cardUnits }) {
     return (
         <div className="card">
-            <div class="cardTitle">
+            <div className="cardTitle">
                 {cardTitle}
             </div>
             <div className="cardBottom">
-                <div class="cardValue">
+                <div className="cardValue">
                     {cardValue}
                 </div>
-                <div class="cardUnits">
+                <div className="cardUnits">
                     {cardUnits}
                 </div>
             </div>
