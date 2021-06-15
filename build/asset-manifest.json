@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.fd2d614a.chunk.css",
-    "main.js": "./static/js/main.460972b1.chunk.js",
-    "main.js.map": "./static/js/main.460972b1.chunk.js.map",
+    "main.css": "./static/css/main.2463c1ed.chunk.css",
+    "main.js": "./static/js/main.730b016e.chunk.js",
+    "main.js.map": "./static/js/main.730b016e.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.bb6c5c14.js",
     "runtime-main.js.map": "./static/js/runtime-main.bb6c5c14.js.map",
     "static/css/2.2d153cc7.chunk.css": "./static/css/2.2d153cc7.chunk.css",
-    "static/js/2.ab5ad88e.chunk.js": "./static/js/2.ab5ad88e.chunk.js",
-    "static/js/2.ab5ad88e.chunk.js.map": "./static/js/2.ab5ad88e.chunk.js.map",
+    "static/js/2.c340d684.chunk.js": "./static/js/2.c340d684.chunk.js",
+    "static/js/2.c340d684.chunk.js.map": "./static/js/2.c340d684.chunk.js.map",
     "index.html": "./index.html",
     "static/css/2.2d153cc7.chunk.css.map": "./static/css/2.2d153cc7.chunk.css.map",
-    "static/css/main.fd2d614a.chunk.css.map": "./static/css/main.fd2d614a.chunk.css.map",
-    "static/js/2.ab5ad88e.chunk.js.LICENSE.txt": "./static/js/2.ab5ad88e.chunk.js.LICENSE.txt",
+    "static/css/main.2463c1ed.chunk.css.map": "./static/css/main.2463c1ed.chunk.css.map",
+    "static/js/2.c340d684.chunk.js.LICENSE.txt": "./static/js/2.c340d684.chunk.js.LICENSE.txt",
     "static/media/App.css": "./static/media/BackgorundMask.5a353b86.svg",
     "static/media/RobbieGray.e2fe7348.svg": "./static/media/RobbieGray.e2fe7348.svg",
     "static/media/index.css": "./static/media/ibm-plex-sans-latin-700italic.f471d38a.woff2"
@@ -19,8 +19,8 @@
   "entrypoints": [
     "static/js/runtime-main.bb6c5c14.js",
     "static/css/2.2d153cc7.chunk.css",
-    "static/js/2.ab5ad88e.chunk.js",
-    "static/css/main.fd2d614a.chunk.css",
-    "static/js/main.460972b1.chunk.js"
+    "static/js/2.c340d684.chunk.js",
+    "static/css/main.2463c1ed.chunk.css",
+    "static/js/main.730b016e.chunk.js"
   ]
 }
