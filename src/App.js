@@ -38,6 +38,8 @@ function App({
       <div className="generals">
         <MiniCard cardTitle="Number of Areas" cardValue={totalAreas} />
         <MiniCard cardTitle="Elapsed Time" cardValue={emergencyTime} cardUnits="Hours" />
+        <MiniCard cardTitle="Total Energy" cardValue={totalEnergyJob} cardUnits="Kwh" />
+
       </div>
       <div>
         <div className="gridContainer">
@@ -127,6 +129,7 @@ App.propTypes = {
   totalEnergyJob: PropTypes.string,
 }
 
+/*
 App.defaultProps = {
   headline: 'Drying Certificate',
   address: '',
@@ -141,8 +144,8 @@ App.defaultProps = {
   totalAreas: '',
   totalEnergyJob: '',
 }
+*/
 
-/*
 App.defaultProps = {
   headline: 'Drying Certificate',
   address: '1040 Martin Grove Rd',
@@ -155,7 +158,9 @@ App.defaultProps = {
   dryingTime: [5, 5.4],
   totalEnergy: [12, 12],
   totalAreas: '0',
+  totalEnergyJob: '2',
+
 }
-*/
+
 
 export default App;
