@@ -18,6 +18,7 @@ function App({
   dryingTime,
   totalEnergy,
   totalAreas,
+  totalEnergyJob,
   robbieCertificateNumber,
 }) {
 
@@ -123,6 +124,7 @@ App.propTypes = {
   dryingTime: PropTypes.array,
   totalEnergy: PropTypes.array,
   totalAreas: PropTypes.string,
+  totalEnergyJob: PropTypes.string,
 }
 
 App.defaultProps = {
@@ -137,6 +139,7 @@ App.defaultProps = {
   dryingTime: [],
   totalEnergy: [],
   totalAreas: '',
+  totalEnergyJob: '',
 }
 
 /*
