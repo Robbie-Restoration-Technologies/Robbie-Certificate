@@ -36,7 +36,7 @@ function App({
       </div>
       <div className="generals">
         <MiniCard cardTitle="Number of Areas" cardValue={totalAreas} />
-        <MiniCard cardTitle="Emergency Time" cardValue={emergencyTime} cardUnits="Hours" />
+        <MiniCard cardTitle="Elapsed Time" cardValue={emergencyTime} cardUnits="Hours" />
       </div>
       <div>
         <div className="gridContainer">
@@ -69,7 +69,7 @@ function App({
           </div>
 
           <div className="column">
-            <div className="header">Drying Time</div>
+            <div className="header">Elapsed Time</div>
             <div className="colContent">
               {dryingTime.map((dryingTimeo, index) => (
                 <div className="dato" key={index}>{dryingTimeo}</div>
