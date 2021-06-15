@@ -2,9 +2,11 @@ import PropTypes from "prop-types";
 import './App.css';
 import MiniCard from './components/miniCard/miniCard'
 import { ReactComponent as RobbieLogo } from './RobbieGray.svg'
+import moment from "moment"
 //import { ReactComponent as BackgorundMask } from './BackgorundMask.svg'
 
-function App({ 
+moment().format('MMMM Do YYYY, h:mm:ss a');
+function App({
   headline,
   address,
   postalCode,
@@ -18,8 +20,8 @@ function App({
   totalAreas,
   robbieCertificateNumber,
 }) {
-    
-    return (
+
+  return (
     <div className="App">
       <div className="logo">
         <RobbieLogo></RobbieLogo>
@@ -28,60 +30,83 @@ function App({
         {headline}
       </div>
       <div className="generalDataGrid">
-        <div>Address: {address}</div>
-        <div>Postal Code: {postalCode}</div>
-        <div>Claim Number: {claimNumber}</div>
+        <div className="generalData">Address: <br/> <span className="genDato">{address}</span></div>
+        <div className="generalData">Postal Code: <br/><span className="genDato">{postalCode}</span></div>
+        <div className="generalData">Claim Number: <br/> <span className="genDato">{claimNumber}</span></div>
       </div>
       <div className="generals">
         <MiniCard cardTitle="Number of Areas" cardValue={totalAreas} />
         <MiniCard cardTitle="Emergency Time" cardValue={emergencyTime} cardUnits="Hours" />
       </div>
       <div>
+        <div className="gridContainer">
 
-
-          <table border="1" align="center" cellPadding="5px">
-            <tbody>
-            <tr>
-              <td align="right">Area</td>
+          <div className="column">
+            <div className="headerArea">Areas</div>
+            <div className="colContentArea">
               {areas.map((area, index) => (
-                <td key={index}>{area}</td>            
+                <div className="area" key={index}>{area}</div>
               ))}
-            </tr><tr>
-              <td align="right">Start date</td>
+            </div>
+          </div>
+
+          <div className="column">
+            <div className="header">Start Date</div>
+            <div className="colContent">
               {startDate.map((startDateo, index) => (
-                <td key={index}>{startDateo}</td>            
+                <div className="dato" key={index}>{startDateo}</div>
               ))}
-            </tr><tr>
-              <td align="right">End date</td>
+            </div>
+          </div>
+
+          <div className="column">
+            <div className="header">End Date</div>
+            <div className="colContent">
               {endDate.map((endDateo, index) => (
-                <td key={index}>{endDateo}</td>            
+                <div className="dato" key={index}>{endDateo}</div>
               ))}
-            </tr><tr>
-              <td align="right">Drying Time</td>
+            </div>
+          </div>
+
+          <div className="column">
+            <div className="header">Drying Time</div>
+            <div className="colContent">
               {dryingTime.map((dryingTimeo, index) => (
-                <td key={index}>{dryingTimeo}</td>            
+                <div className="dato" key={index}>{dryingTimeo}</div>
               ))}
-            </tr><tr>
-              <td align="right">Total Energy</td>
+            </div>
+          </div>
+
+          <div className="column">
+            <div className="header">Energy</div>
+            <div className="colContent">
               {totalEnergy.map((totEnergy, index) => (
-                <td key={index}>{totEnergy}</td>            
+                <div className="dato" key={index}>{totEnergy.toFixed(2)}</div>
               ))}
-            </tr><tr>
-              <td align="right">Cost Energy</td>
-              {totalEnergy.map((totCost, index) => (
-                <td key={index}>{totCost*0.0119}</td>
+            </div>
+          </div>
+
+          <div className="column">
+            <div className="header">Cost</div>
+            <div className="colContent">
+            {totalEnergy.map((totCost, index) => (
+                <div className="dato" key={index}>{(totCost * 0.0119).toFixed(2)}</div>
               ))}
-            </tr>
-            </tbody>
-          </table>
+            </div>
+          </div>
+
         </div>
 
-      <div className="footer">
-      <div className="rcn">RCN: {robbieCertificateNumber}</div>
-      <div className="incDetails">
-        <div>Robbie Restoration Technologies Inc.</div>
-        <div>1040 Martin Grove Rd Etobicoke, Ontario, Cananda.</div>
+
+        
       </div>
+
+      <div className="footer">
+        <div className="rcn">RCN: {robbieCertificateNumber}</div>
+        <div className="incDetails">
+          <div>Robbie Restoration Technologies Inc.</div>
+          <div>1040 Martin Grove Rd Etobicoke, Ontario, Cananda.</div>
+        </div>
       </div>
     </div>
   );
@@ -89,23 +114,28 @@ function App({
 
 App.propTypes = {
   headline: PropTypes.string,
-  showLogos: PropTypes.string,
-  backgroundImage: PropTypes.string,
+  address: PropTypes.string,
+  postalCode: PropTypes.string,
+  claimNumber: PropTypes.string,
+  areas: PropTypes.array,
+  startDate: PropTypes.array,
+  endDate: PropTypes.array,
+  dryingTime: PropTypes.array,
+  totalEnergy: PropTypes.array,
+  totalAreas: PropTypes.string,
 }
 
 App.defaultProps = {
   headline: 'Drying Certificate',
-  showLogos: 'true',
-  backgroundImage: '',
-  address: '',
-  postalCode: '',
-  claimNumber: '',
-  areas: [],
-  startDate: [],
-  endDate: [],
-  emergencyTime: [],
-  dryingTime: [],
-  totalEnergy: [],
+  address: '1040 Martin Grove Rd',
+  postalCode: 'm4m2y3',
+  claimNumber: '12341234',
+  areas: ["Area1", "Area2"],
+  startDate: [moment(Date.now()).format('MMM Do YY, h:mm a'), moment(Date.now()).format('MMM Do YY, h:mm a')],
+  endDate: [moment(Date.now()).format('MMM Do YY, h:mm a'), moment(Date.now()).format('MMM Do YY, h:mm a')],
+  emergencyTime: [5.2, 5],
+  dryingTime: [5, 5.4],
+  totalEnergy: [12, 12],
   totalAreas: '0',
 }
 
