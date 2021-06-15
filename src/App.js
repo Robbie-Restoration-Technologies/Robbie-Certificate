@@ -54,7 +54,7 @@ function App({
             <div className="header">Start Date</div>
             <div className="colContent">
               {startDate.map((startDateo, index) => (
-                <div className="dato" key={index}>{startDateo}</div>
+                <div className="dato" key={index}>{moment(startDateo).format('MMM Do YY, h:mm a')}</div>
               ))}
             </div>
           </div>
@@ -63,7 +63,7 @@ function App({
             <div className="header">End Date</div>
             <div className="colContent">
               {endDate.map((endDateo, index) => (
-                <div className="dato" key={index}>{endDateo}</div>
+                <div className="dato" key={index}>{moment(endDateo).format('MMM Do YY, h:mm a')}</div>
               ))}
             </div>
           </div>
@@ -127,6 +127,21 @@ App.propTypes = {
 
 App.defaultProps = {
   headline: 'Drying Certificate',
+  address: '',
+  postalCode: '',
+  claimNumber: '',
+  areas: [],
+  startDate: [],
+  endDate: [],
+  emergencyTime: [],
+  dryingTime: [],
+  totalEnergy: [],
+  totalAreas: '',
+}
+
+/*
+App.defaultProps = {
+  headline: 'Drying Certificate',
   address: '1040 Martin Grove Rd',
   postalCode: 'm4m2y3',
   claimNumber: '12341234',
@@ -138,5 +153,6 @@ App.defaultProps = {
   totalEnergy: [12, 12],
   totalAreas: '0',
 }
+*/
 
 export default App;
