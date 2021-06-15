@@ -16,13 +16,12 @@ html,body {
 }
 
 .App {
-  border: black 1px solid;
   padding-left: 2cm;
   padding-top: 2cm;
   padding-bottom: 0.5cm;
   padding-right: 2cm;
-  width: 22cm;
-  height: 28cm;
+  width: 215.9mm;
+  height: 279.4mm;
   position: absolute;
   top: 0;
   left: 0;
