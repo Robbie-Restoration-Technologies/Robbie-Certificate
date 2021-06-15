@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import './App.css';
 import MiniCard from './components/miniCard/miniCard'
-import { ReactComponent as RobbieLogo } from './RobbieGray.svg'
+import { ReactComponent as RobbieLogo } from './Robbie.svg'
 import moment from "moment"
 //import { ReactComponent as BackgorundMask } from './BackgorundMask.svg'
 

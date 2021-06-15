@@ -61,7 +61,7 @@ h1 {
 .logo {
   text-align: left;
   align-self: start;
-  margin-bottom: 0.5cm;
+  margin-bottom: 0.8cm;
 }
 
 .headline{
@@ -70,7 +70,6 @@ h1 {
   text-align: left;
   align-self: flex-start;
   margin-bottom: 0.5cm;
-
 }
 
 .generalDataGrid{
