@@ -127,6 +127,7 @@ App.propTypes = {
   totalEnergy: PropTypes.array,
   totalAreas: PropTypes.string,
   totalEnergyJob: PropTypes.string,
+  robbieCertificateNumber: PropTypes.string,
 }
 
 /*
@@ -159,7 +160,7 @@ App.defaultProps = {
   totalEnergy: [12, 12],
   totalAreas: '0',
   totalEnergyJob: '2',
-
+  robbieCertificateNumber: '125980'
 }
 
 
