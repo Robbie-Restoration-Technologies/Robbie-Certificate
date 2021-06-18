@@ -20,7 +20,8 @@ function App({
   totalAreas,
   totalEnergyJob,
   robbieCertificateNumber,
-  totalEnergyCostJob
+  totalEnergyCostJob,
+  totalLapsedTime
 }) {
 
   return (
@@ -38,7 +39,7 @@ function App({
       </div>
       <div className="generals">
         <MiniCard cardTitle="Number of Areas" cardValue={totalAreas} />
-        <MiniCard cardTitle="Elapsed Time" cardValue={emergencyTime} cardUnits="Hours" />
+        <MiniCard cardTitle="Elapsed Time" cardValue={totalLapsedTime} cardUnits="Hours" />
         <MiniCard cardTitle="Total Energy" cardValue={totalEnergyJob} cardUnits="Kwh" />
         <MiniCard cardTitle="Total Energy Cost" cardValue={totalEnergyCostJob} cardUnits="CAD" />
 
@@ -130,7 +131,8 @@ App.propTypes = {
   totalAreas: PropTypes.string,
   totalEnergyJob: PropTypes.string,
   robbieCertificateNumber: PropTypes.string,
-  totalEnergyCostJob: PropTypes.string
+  totalEnergyCostJob: PropTypes.string,
+  totalLapsedTime: PropTypes.string
 }
 
 
@@ -148,7 +150,8 @@ App.defaultProps = {
   totalAreas: '',
   totalEnergyJob: '',
   robbieCertificateNumber: '',
-  totalEnergyCostJob: ''
+  totalEnergyCostJob: '',
+  totalLapsedTime: ''
 }
 
 
