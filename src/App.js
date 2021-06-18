@@ -20,6 +20,7 @@ function App({
   totalAreas,
   totalEnergyJob,
   robbieCertificateNumber,
+  totalEnergyCostJob
 }) {
 
   return (
@@ -39,6 +40,7 @@ function App({
         <MiniCard cardTitle="Number of Areas" cardValue={totalAreas} />
         <MiniCard cardTitle="Elapsed Time" cardValue={emergencyTime} cardUnits="Hours" />
         <MiniCard cardTitle="Total Energy" cardValue={totalEnergyJob} cardUnits="Kwh" />
+        <MiniCard cardTitle="Total Energy Cost" cardValue={totalEnergyCostJob} cardUnits="CAD" />
 
       </div>
       <div>
@@ -128,9 +130,10 @@ App.propTypes = {
   totalAreas: PropTypes.string,
   totalEnergyJob: PropTypes.string,
   robbieCertificateNumber: PropTypes.string,
+  totalEnergyCostJob: PropTypes.string
 }
 
-/*
+
 App.defaultProps = {
   headline: 'Drying Certificate',
   address: '',
@@ -144,9 +147,12 @@ App.defaultProps = {
   totalEnergy: [],
   totalAreas: '',
   totalEnergyJob: '',
+  robbieCertificateNumber: '',
+  totalEnergyCostJob: ''
 }
-*/
 
+
+/*
 App.defaultProps = {
   headline: 'Drying Certificate',
   address: '1040 Martin Grove Rd',
@@ -160,8 +166,10 @@ App.defaultProps = {
   totalEnergy: [12, 12],
   totalAreas: '0',
   totalEnergyJob: '2',
-  robbieCertificateNumber: '125980'
+  robbieCertificateNumber: '125980',
+  robbieCertificateNumber: '1234',
+  totalEnergyCostJob: '12.345'
 }
-
+*/
 
 export default App;
