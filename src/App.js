@@ -25,7 +25,9 @@ function App({
   totalDhArea,
   totalBlArea,
   totalCountDh,
-  totalCountBl
+  totalCountBl,
+  demolitiontime,
+  totaldryingtime
 }) {
 
   return (
@@ -43,7 +45,9 @@ function App({
       </div>
       <div className="generals">
         <MiniCard cardTitle="Number of Areas" cardValue={totalAreas} />
-        <MiniCard cardTitle="Elapsed Time" cardValue={totalLapsedTime} cardUnits="Hours" />
+        <MiniCard cardTitle="Elapsed Time" cardValue={totalLapsedTime} cardUnits="H" />
+        <MiniCard cardTitle="Demo Estimated Time" cardValue={demolitiontime} cardUnits="H" />
+        <MiniCard cardTitle="Drying Estimated Time" cardValue={totaldryingtime} cardUnits="H" />
         <MiniCard cardTitle="Total Energy" cardValue={totalEnergyJob} cardUnits="Kwh" />
         <MiniCard cardTitle="Total Energy Cost" cardValue={totalEnergyCostJob} cardUnits="CAD" />
         <MiniCard cardTitle="Total DH" cardValue={totalCountDh} cardUnits="pcs" />
@@ -138,12 +142,13 @@ App.propTypes = {
   totalBlArea: PropTypes.array,
   totalDhArea: PropTypes.array,
   totalCountBl: PropTypes.number,
-  totalCountDh: PropTypes.number
-
+  totalCountDh: PropTypes.number,
+  demolitiontime: PropTypes.number,
+  totaldryingtime: PropTypes.number
 }
-
-
-App.defaultProps = {
+  
+  
+  App.defaultProps = {
   headline: 'Drying Certificate',
   address: '',
   postalCode: '',
@@ -154,15 +159,17 @@ App.defaultProps = {
   emergencyTime: [],
   dryingTime: [],
   totalEnergy: [],
-  totalAreas: '',
-  totalEnergyJob: '',
+  totalAreas: '0',
+  totalEnergyJob: '0',
   robbieCertificateNumber: '',
-  totalEnergyCostJob: '',
-  totalLapsedTime: '',
+  totalEnergyCostJob: '0',
+  totalLapsedTime: '0',
   totalBlArea: [],
   totalDhArea: [],
   totalCountBl: 0,
-  totalCountDh: 0
+  totalCountDh: 0,
+  demolitiontime: 0,
+  totaldryingtime: 0
 }
 
 
