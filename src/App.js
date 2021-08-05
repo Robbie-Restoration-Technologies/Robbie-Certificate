@@ -106,7 +106,7 @@ function App({
             <div className="header">Cost</div>
             <div className="colContent">
             {totalEnergy.map((totCost, index) => (
-                <div className="dato" key={index}>{(totCost * 0.0119).toFixed(2)}</div>
+                <div className="dato" key={index}>{(totCost * 0.17).toFixed(2)}</div>
               ))}
             </div>
           </div>
