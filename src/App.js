@@ -88,7 +88,7 @@ function App({
             <div className="header">Elapsed Time</div>
             <div className="colContent">
               {dryingTime.map((dryingTimeo, index) => (
-                <div className="dato" key={index}>{dryingTimeo}</div>
+                <div className="dato" key={index}>{dryingTimeo - demolitiontime}</div>
               ))}
             </div>
           </div>
