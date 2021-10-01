@@ -85,10 +85,10 @@ function App({
           </div>
 
           <div className="column">
-            <div className="header">Elapsed Time</div>
+            <div className="header">Drying Time</div>
             <div className="colContent">
               {dryingTime.map((dryingTimeo, index) => (
-                <div className="dato" key={index}>{dryingTimeo - demolitiontime}</div>
+                <div className="dato" key={index}>{(dryingTimeo - demolitiontime).toFixed(2)}</div>
               ))}
             </div>
           </div>
