@@ -91,7 +91,7 @@ function App({
                 dryingTimeo < demolitiontime ?
                   <div className="dato" key={index}> {dryingTimeo.toFixed(2)}</div>
                   :
-                  <div className="dato" key={index}> {dryingTimeo.toFixed(2) - demolitiontime.toFixed(2)}</div>
+                  <div className="dato" key={index}> {(dryingTimeo - demolitiontime).toFixed(2)}</div>
               ))}
             </div>
           </div>
