@@ -134,7 +134,7 @@ App.propTypes = {
   demolitiontime: PropTypes.number,
   totaldryingtime: PropTypes.number
 }
-/* 
+
   App.defaultProps = {
   headline: 'DRYING CERTIFICATE FOR:',
   address: '',
@@ -151,8 +151,8 @@ App.propTypes = {
   demolitiontime: 0,
   totaldryingtime: 0
 }
-*/
 
+/* 
 App.defaultProps = {
   headline: 'DRYING CERTIFICATE FOR:',
   address: '6-110 West Beaver Creek Road, Richmond Hill, ON, Canada',
@@ -171,6 +171,6 @@ App.defaultProps = {
   demolitiontime: 0.0,
   totaldryingtime: 118.60,
 }
-
+*/
 
 export default App;
