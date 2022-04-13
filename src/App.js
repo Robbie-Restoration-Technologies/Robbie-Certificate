@@ -32,7 +32,7 @@ function App({
       <div>
         <div className="generalData">{headline}</div>
         <div className="generalData">Claim #: <span className="genDato">{claimNumber}</span></div>
-        <div className="generalData"><span className="genDato">{address}</span></div>
+        <div className="generalData"><span className="genDato">{address.split(',')[0]}</span></div>
         <div className="generalData"><span className="genDato">{postalCode}</span></div>
       </div>
       <div className="generalData">SUMMARY</div>
@@ -50,10 +50,10 @@ function App({
           {areas.map((area, index) => (
             <>
               <tr>
-                <td>{area.name}</td><td>{(area.emergencyTime - area.dryingTime).toFixed(2)} Drying Time</td><td>CAD$ {(area.totalEnergy * 0.17).toFixed(2)}</td>
+                <td>{area.name}</td><td>{(totalLapsedTime - area.dryingTime).toFixed(2)} Drying Time</td><td>CAD$ {(area.totalEnergy * 0.17).toFixed(2)}</td>
               </tr>
               <tr>
-                <td>{area.dh} Dehumidifier - {area.bl} Blower</td><td>Pre-drying: {area.dryingTime} - Total: {area.emergencyTime}</td><td>{area.totalEnergy} Kwh</td>
+                <td>{area.dh} Dehumidifier - {area.bl} Blower</td><td>Pre-drying: {area.dryingTime} - Total: {totalLapsedTime}</td><td>{area.totalEnergy} Kwh</td>
               </tr>
             </>
           ))}
@@ -72,14 +72,12 @@ function App({
   );
 }
 
-/*
 App.propTypes = {
   headline: PropTypes.string,
   address: PropTypes.string,
   postalCode: PropTypes.string,
   claimNumber: PropTypes.string,
   areas: PropTypes.array,
-  emergencyTime: PropTypes.array,
   totalAreas: PropTypes.string,
   totalEnergyJob: PropTypes.string,
   robbieCertificateNumber: PropTypes.string,
@@ -90,14 +88,13 @@ App.propTypes = {
   demolitiontime: PropTypes.number,
   totaldryingtime: PropTypes.number
 }
-*/  
+/* 
   App.defaultProps = {
   headline: 'DRYING CERTIFICATE FOR:',
   address: '',
   postalCode: '',
   claimNumber: '',
   areas: [],
-  emergencyTime: [],
   totalAreas: '0',
   totalEnergyJob: '0',
   robbieCertificateNumber: '',
@@ -108,23 +105,26 @@ App.propTypes = {
   demolitiontime: 0,
   totaldryingtime: 0
 }
+*/
 
 App.defaultProps = {
   headline: 'DRYING CERTIFICATE FOR:',
-  address: '1040 Martin Grove Rd',
-  postalCode: 'm4m2y3',
-  claimNumber: '12341234',
-  areas: [{name: "Kitchen", dryingTime: 5, totalEnergy: 8, totalBlArea: 3, totalDhArea: 1},
-          {name: "Room Waiting", dryingTime: 5.4, totalEnergy: 4, totalBlArea: 4, totalDhArea: 1}],
-  emergencyTime: [5.2, 5],
-  totalAreas: '2',
-  totalEnergyJob: '2',
-  robbieCertificateNumber: '125980',
-  totalEnergyCostJob: '12.345',
-  totalCountBl: 7,
-  totalCountDh: 2,
-  demolitiontime: 23.40,
-  totaldryingtime: 23.90, 
+  address: '6-110 West Beaver Creek Road, Richmond Hill, ON, Canada',
+  postalCode: 'L4B3L6',
+  claimNumber: '5304B3981',
+  areas: [{name: "Men's washroom", dryingTime: 44.8, totalEnergy: 0.265, totalBlArea: 2, totalDhArea: 1},
+          {name: "Women's washroom", dryingTime: 48.45, totalEnergy: 0.707, totalBlArea: 2, totalDhArea: 1},
+          {name: "Hot water tank storage ar", dryingTime: 118.42, totalEnergy: 5.035, totalBlArea: 2, totalDhArea: 1}],
+  totalAreas: '3',
+  totalEnergyJob: '6.006',
+  robbieCertificateNumber: '157368',
+  totalEnergyCostJob: '1.021',
+  totalLapsedTime: 118.6,
+  totalCountBl: 6,
+  totalCountDh: 3,
+  demolitiontime: 0.0,
+  totaldryingtime: 118.60, 
 }
+
 
 export default App;
