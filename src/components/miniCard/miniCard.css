@@ -1,7 +1,7 @@
 .card {
   background-color: #f7f9fa;
   border-radius: 16px;
-  height: 3cm;
+  height: 1cm;
   width: 100%;
   position: relative;
   padding-top: 1rem;
@@ -12,18 +12,19 @@
 
 .cardTitle {
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: #212121;
   text-align: left;
 }
 
 .cardBottom{
-  margin: 1rem;
+  margin: 0.5rem;
   position: absolute;
   display: flex;
   bottom: 0;
   width: 80%;
+  text-align: left;
 }
 
 .cardValue {
@@ -31,7 +32,7 @@
   flex: 1;
   font-weight: 500;
   text-align: left;
-  font-size: 40px;
+  font-size: 20px;
   color: #069697;
 }
 
@@ -40,6 +41,37 @@
   font-weight: 500;
   text-align: left;
   align-self: flex-end;
-  font-size: 28px;
+  font-size: 20px;
   color: #069697;
 }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.App {
+  text-align: center;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color:gray;
+   h1, h2, h3, h4, h5, h6{
+    color: #00114a;
+  }
+  .h1, .h2, .h3, .h4, .h5{
+    color: #00114a;
+  }
+}
+
+.table-title{
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #1B2040;
+  text-align: left;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+
+}
+
