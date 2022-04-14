@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import './App.css';
 import { ReactComponent as RobbieLogo } from './Robbie.svg'
+import { ReactComponent as Watermark } from './Watermark.svg'
 import moment from "moment";
 
 moment().format('MMMM Do YYYY, h:mm:ss a');
@@ -112,6 +113,7 @@ function App({
         <span className="small">1040 Martin Grove Rd Etobicoke, ON, Cananda. </span>
         </div>
       </div>
+      <Watermark className='watermark'/>
     </div>
   );
 }
