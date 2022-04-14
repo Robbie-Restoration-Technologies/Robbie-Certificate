@@ -57,7 +57,7 @@ function App({
 
             <td>
               <div>{totaldryingtime}h Drying</div>
-              <div className="subtitle">Pre-drying: {demolitiontime}h - Total: {totaldryingtime + demolitiontime}h</div>
+              <div className="subtitle">Pre-drying: {demolitiontime}h - Total: {(totaldryingtime + demolitiontime).toFixed(2)}h</div>
             </td>
 
             <td>
