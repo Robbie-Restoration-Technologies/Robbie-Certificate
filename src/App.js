@@ -58,13 +58,13 @@ function App({
             </td>
 
             <td>
-              <div>{totaldryingtime - demolitiontime}h Drying</div>
-              <div className="subtitle">Pre-drying: {demolitiontime}h - Total: {totaldryingtime}h</div>
+              <div>{totaldryingtime}h Drying</div>
+              <div className="subtitle">Pre-drying: {demolitiontime}h - Total: {totaldryingtime + demolitiontime}h</div>
             </td>
 
             <td>
               <div>CAD${totalEnergyCostJob}</div>
-              <div className="subtitle">{totalEnergyJob}kWh</div>
+              <div className="subtitle">{totalEnergyJob.toFixed(2)}kWh</div>
             </td>
           </tr>
         </tbody>
@@ -92,13 +92,13 @@ function App({
                 </td>
 
                 <td>
-                  <div>{(totalLapsedTime - area.dryingTime).toFixed(2)}h Drying</div>
-                  <div className="subtitle">Pre-drying: {area.dryingTime}h - Total: {totalLapsedTime}h</div>
+                  <div>{(area.dryingTime).toFixed(2)}h Drying</div>
+                  <div className="subtitle">Pre-drying: {area.demolitiontime}h - Total: {area.ellapsetime}h</div>
                 </td>
 
                 <td>
                   <div>CAD${(area.totalEnergy * 0.17).toFixed(2)}</div>
-                  <div className="subtitle">{area.totalEnergy}kWh</div>
+                  <div className="subtitle">{area.totalEnergy.toFixed(2)}kWh</div>
                 </td>
               </tr>
             </>
