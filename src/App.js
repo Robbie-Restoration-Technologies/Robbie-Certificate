@@ -91,7 +91,7 @@ function App({
 
                 <td>
                   <div>{(area.dryingTime).toFixed(2)}h Drying</div>
-                  <div className="subtitle">Pre-drying: {(area.totalElapsedTimeA - area.dryingtime).toFixed(2)}h - Total: {area.totalElapsedTimeA.toFixed(2)}h</div>
+                  <div className="subtitle">Pre-drying: {(area.totalElapsedTimeA - area.dryingTime).toFixed(2)}h - Total: {area.totalElapsedTimeA.toFixed(2)}h</div>
                 </td>
 
                 <td>
