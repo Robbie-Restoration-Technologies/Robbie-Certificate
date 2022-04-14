@@ -64,7 +64,7 @@ function App({
 
             <td>
               <div>CAD${totalEnergyCostJob}</div>
-              <div className="subtitle">{totalEnergyJob.toFixed(2)}kWh</div>
+              <div className="subtitle">{totalEnergyJob}kWh</div>
             </td>
           </tr>
         </tbody>
@@ -141,10 +141,10 @@ App.propTypes = {
   postalCode: '',
   claimNumber: '',
   areas: [],
-  totalAreas: '0',
-  totalEnergyJob: '0',
+  totalAreas: 0,
+  totalEnergyJob: 0.0,
   robbieCertificateNumber: '',
-  totalEnergyCostJob: '0',
+  totalEnergyCostJob: 0,
   totalLapsedTime: '0',
   totalCountBl: 0,
   totalCountDh: 0,
