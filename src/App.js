@@ -147,7 +147,8 @@ App.propTypes = {
   totalCountBl: 0,
   totalCountDh: 0,
   demolitiontime: 0,
-  totaldryingtime: 0
+  totaldryingtime: 0,
+  showLogos: true,
 }
 
 /* 
