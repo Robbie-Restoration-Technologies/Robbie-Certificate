@@ -93,7 +93,7 @@ function App({
 
                 <td>
                   <div>{(area.dryingTime).toFixed(2)}h Drying</div>
-                  <div className="subtitle">Pre-drying: {area.demolitiontime}h - Total: {area.ellapsetime}h</div>
+                  <div className="subtitle">Pre-drying: {(area.totalElapsedTimeA - area.dryingtime).toFixed(2)} h - Total: {area.totalElapsedTimeA} h</div>
                 </td>
 
                 <td>
@@ -158,9 +158,9 @@ App.defaultProps = {
   address: '6-110 West Beaver Creek Road, Richmond Hill, ON, Canada',
   postalCode: 'L4B3L6',
   claimNumber: '5304B3981',
-  areas: [{ name: "Men's washroom", dryingTime: 44.8, totalEnergy: 0.265, totalBlArea: 2, totalDhArea: 1 },
-  { name: "Women's washroom", dryingTime: 48.45, totalEnergy: 0.707, totalBlArea: 2, totalDhArea: 1 },
-  { name: "Hot water tank storage ar", dryingTime: 118.42, totalEnergy: 5.035, totalBlArea: 2, totalDhArea: 1 }],
+  areas: [{ name: "Men's washroom", dryingTime: 44.8, totalEnergy: 0.265, totalBlArea: 2, totalDhArea: 1, totalElapsedTimeA: 44.80 },
+  { name: "Women's washroom", dryingTime: 48.45, totalEnergy: 0.707, totalBlArea: 2, totalDhArea: 1, totalElapsedTimeA: 48.45 },
+  { name: "Hot water tank storage ar", dryingTime: 118.42, totalEnergy: 5.035, totalBlArea: 2, totalDhArea: 1, totalElapsedTimeA: 118.42 }],
   totalAreas: '3',
   totalEnergyJob: '6.006',
   robbieCertificateNumber: '157368',
