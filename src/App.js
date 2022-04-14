@@ -10,12 +10,10 @@ function App({
   postalCode,
   claimNumber,
   areas,
-  emergencyTime,
   totalAreas,
   totalEnergyJob,
   robbieCertificateNumber,
   totalEnergyCostJob,
-  totalLapsedTime,
   totalCountDh,
   totalCountBl,
   demolitiontime,
@@ -93,7 +91,7 @@ function App({
 
                 <td>
                   <div>{(area.dryingTime).toFixed(2)}h Drying</div>
-                  <div className="subtitle">Pre-drying: {(area.totalElapsedTimeA - area.dryingtime).toFixed(2)} h - Total: {area.totalElapsedTimeA} h</div>
+                  <div className="subtitle">Pre-drying: {(area.totalElapsedTimeA - area.dryingtime).toFixed(2)} h - Total: {area.totalElapsedTimeA.toFixed(2)} h</div>
                 </td>
 
                 <td>
@@ -145,7 +143,7 @@ App.propTypes = {
   totalEnergyJob: 0.0,
   robbieCertificateNumber: '',
   totalEnergyCostJob: 0,
-  totalLapsedTime: '0',
+  totalLapsedTime: 0,
   totalCountBl: 0,
   totalCountDh: 0,
   demolitiontime: 0,
