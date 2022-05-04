@@ -91,6 +91,7 @@ function App({
                 </td>
 
                 <td>
+                  {area.dryingTime !== null ? area.dryingTime : 0}
                   <div>{(area.dryingTime).toFixed(2)}h Drying</div>
                   <div className="subtitle">Pre-drying: {(area.totalElapsedTimeA - area.dryingTime).toFixed(2)}h - Total: {area.totalElapsedTimeA.toFixed(2)}h</div>
                 </td>
@@ -113,7 +114,7 @@ function App({
         <span className="small">1040 Martin Grove Rd Etobicoke, ON, Cananda. </span>
         </div>
       </div>
-      <img src={watermark1} className='watermark'></img>
+      <img src={watermark1} className='watermark' alt=''></img>
     </div>
   );
 }
