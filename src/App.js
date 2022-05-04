@@ -91,7 +91,6 @@ function App({
                 </td>
 
                 <td>
-                  {area.dryingTime !== null ? area.dryingTime : 0}
                   <div>{(area.dryingTime).toFixed(2)}h Drying</div>
                   <div className="subtitle">Pre-drying: {(area.totalElapsedTimeA - area.dryingTime).toFixed(2)}h - Total: {area.totalElapsedTimeA.toFixed(2)}h</div>
                 </td>
