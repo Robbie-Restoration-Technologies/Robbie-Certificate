@@ -86,18 +86,18 @@ function App({
                 <td>
                   <div>
                     <div>{area.name}</div>
-                    <div className="subtitle">{area.dh} Dehumidifier - {area.bl} Blower</div>
+                    <div className="subtitle">{area.dh} Dehumidifier - {area.blowers} Blower</div>
                   </div>
                 </td>
 
                 <td>
-                  <div>{(area.dryingTime).toFixed(2)}h Drying</div>
-                  <div className="subtitle">Pre-drying: {(area.totalElapsedTimeA - area.dryingTime).toFixed(2)}h - Total: {area.totalElapsedTimeA.toFixed(2)}h</div>
+                  <div>{(area.drying_time).toFixed(2)}h Drying</div>
+                  <div className="subtitle">Pre-drying: {(area.totalElapsedTimeA - area.drying_time).toFixed(2)}h - Total: {area.totalElapsedTimeA.toFixed(2)}h</div>
                 </td>
 
                 <td>
-                  <div>CAD${(area.totalEnergy * 0.17).toFixed(2)}</div>
-                  <div className="subtitle">{area.totalEnergy.toFixed(2)}kWh</div>
+                  <div>CAD${(area.totenergy * 0.17).toFixed(2)}</div>
+                  <div className="subtitle">{area.totenergy.toFixed(2)}kWh</div>
                 </td>
               </tr>
             </>
@@ -135,7 +135,8 @@ App.propTypes = {
   totaldryingtime: PropTypes.number
 }
 
-  App.defaultProps = {
+
+App.defaultProps = {
   headline: 'DRYING CERTIFICATE FOR:',
   address: '',
   postalCode: '',
@@ -159,9 +160,9 @@ App.defaultProps = {
   address: '6-110 West Beaver Creek Road, Richmond Hill, ON, Canada',
   postalCode: 'L4B3L6',
   claimNumber: '5304B3981',
-  areas: [{ name: "Men's washroom", dryingTime: 44.8, totalEnergy: 0.265, totalBlArea: 2, totalDhArea: 1, totalElapsedTimeA: 44.80 },
-  { name: "Women's washroom", dryingTime: 48.45, totalEnergy: 0.707, totalBlArea: 2, totalDhArea: 1, totalElapsedTimeA: 48.45 },
-  { name: "Hot water tank storage ar", dryingTime: 118.42, totalEnergy: 5.035, totalBlArea: 2, totalDhArea: 1, totalElapsedTimeA: 118.42 }],
+  areas: [{ name: "Men's washroom", drying_time: 44.8, totenergy: 0.265, blowers: 2, dh: 1, totalElapsedTimeA: 44.80 },
+  { name: "Women's washroom", drying_time: 48.45, totenergy: 0.707, blowers: 2, dh: 1, totalElapsedTimeA: 48.45 },
+  { name: "Hot water tank storage ar", drying_time: 118.42, totenergy: 5.035, blowers: 2, dh: 1, totalElapsedTimeA: 118.42 }],
   totalAreas: '3',
   totalEnergyJob: '6.006',
   robbieCertificateNumber: '157368',
