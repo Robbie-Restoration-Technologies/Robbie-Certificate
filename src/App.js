@@ -96,8 +96,8 @@ function App({
                 </td>
 
                 <td>
-                  <div>CAD${(area.totenergy * 0.17).toFixed(2)}</div>
-                  <div className="subtitle">{area.totenergy.toFixed(2)}kWh</div>
+                  <div>CAD${(area.totenergy * area.drying_time * 0.17).toFixed(2)}</div>
+                  <div className="subtitle">{(area.totenergy * area.drying_time).toFixed(2)}kWh</div>
                 </td>
               </tr>
             </>
