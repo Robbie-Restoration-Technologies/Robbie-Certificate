@@ -101,7 +101,8 @@ function App({
                 pause.id === area.area ?
                   <tr key={index2}>
                     <td>{pause.created_at}</td>
-                    <td colSpan={2}>{pause.why}</td>
+                    <td>{pause.user}</td>
+                    <td>{pause.why}</td>
                   </tr>
                 :
                   null
@@ -113,7 +114,7 @@ function App({
 
       <div className="footer">
         <div className="rcn">Robbie Certificate Number: {robbieCertificateNumber}<br></br>
-        <a href="https://robbiert.com"> www.robbiert.com </a>
+        <a href="https://robbier.com"> www.robbiert.com </a>
         </div>
         <div className="incDetails"> Robbie Restoration Technologies Inc. <br></br>
         <span className="small">1040 Martin Grove Rd Etobicoke, ON, Cananda. </span>
@@ -178,9 +179,9 @@ App.defaultProps = {
   totalCountDh: 3,
   demolitiontime: 0.0,
   totaldryingtime: 118.60,
-  pauses: [{id: 282, created_at: "2023-02-13 08:40:38", why: "Pause 1"},
-  {id: 282, created_at: "2023-02-13 13:56:09", why: "Pause 2"},
-  {id: 284, created_at: "2023-02-14 08:51:47", why: "Pause 3"}],
+  pauses: [{id: 282, created_at: "2023-02-13 08:40:38", why: "Pause 1", user: "ricram1@gmail.com"},
+  {id: 282, created_at: "2023-02-13 13:56:09", why: "Pause 2", user: "ricram1@gmail.com"},
+  {id: 284, created_at: "2023-02-14 08:51:47", why: "Pause 3", user: "ricram1@gmail.com"}],
 }
 
 
