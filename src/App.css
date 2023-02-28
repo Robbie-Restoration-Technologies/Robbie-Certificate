@@ -160,6 +160,21 @@ color: #C4C4C4;
 line-height: 14px;
 }
 
+.pause-title{
+  font-weight: 500;
+  font-size: 11px;
+  font-style: italic; 
+  color: #212121c6;
+}
+
+.pause-text{
+  margin-top: 2px;
+  font-weight: 500;
+  font-size: 9px;
+  font-style: italic; 
+  color: #212121c6;
+}
+
 .watermark{
   position: absolute;
   right: 0;

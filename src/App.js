@@ -1,4 +1,4 @@
-import React from 'react' 
+import React from 'react'
 import PropTypes from "prop-types";
 import './App.css';
 import { ReactComponent as RobbieLogo } from './Robbie.svg'
@@ -100,11 +100,17 @@ function App({
               {pauses.map((pause, index2) => (
                 pause.id === area.area ?
                   <tr key={index2}>
-                    <td>{pause.created_at}</td>
-                    <td>{pause.user}</td>
-                    <td>{pause.why}</td>
+                    <td></td>
+                    <td>
+                      <div className='pause-title'>
+                        Paused at: {pause.created_at}
+                      </div>
+                      <div className='pause-text'>
+                        {pause.why}
+                      </div>
+                    </td>
                   </tr>
-                :
+                  :
                   null
               ))}
             </>
@@ -114,10 +120,10 @@ function App({
 
       <div className="footer">
         <div className="rcn">Robbie Certificate Number: {robbieCertificateNumber}<br></br>
-        <a href="https://robbiert.com"> www.robbiert.com </a>
+          <a href="https://robbiert.com"> www.robbiert.com </a>
         </div>
         <div className="incDetails"> Robbie Restoration Technologies Inc. <br></br>
-        <span className="small">1040 Martin Grove Rd Etobicoke, ON, Cananda. </span>
+          <span className="small">1040 Martin Grove Rd Etobicoke, ON, Cananda. </span>
         </div>
       </div>
       <img src={watermark1} className='watermark' alt=''></img>
@@ -143,25 +149,26 @@ App.propTypes = {
   pauses: PropTypes.array,
 }
 
-// App.defaultProps = {
-//   headline: 'DRYING CERTIFICATE FOR:',
-//   address: '',
-//   postalCode: '',
-//   claimNumber: '',
-//   areas: [],
-//   totalAreas: 0,
-//   totalEnergyJob: 0.0,
-//   robbieCertificateNumber: '',
-//   totalEnergyCostJob: 0,
-//   totalLapsedTime: 0,
-//   totalCountBl: 0,
-//   totalCountDh: 0,
-//   demolitiontime: 0,
-//   totaldryingtime: 0,
-//   showLogos: true,
-//   pauses: [],
-// }
- 
+App.defaultProps = {
+  headline: 'DRYING CERTIFICATE FOR:',
+  address: '',
+  postalCode: '',
+  claimNumber: '',
+  areas: [],
+  totalAreas: 0,
+  totalEnergyJob: 0.0,
+  robbieCertificateNumber: '',
+  totalEnergyCostJob: 0,
+  totalLapsedTime: 0,
+  totalCountBl: 0,
+  totalCountDh: 0,
+  demolitiontime: 0,
+  totaldryingtime: 0,
+  showLogos: true,
+  pauses: [],
+}
+
+/*
 App.defaultProps = {
   headline: 'DRYING CERTIFICATE FOR:',
   address: '6-110 West Beaver Creek Road, Richmond Hill, ON, Canada',
@@ -179,10 +186,18 @@ App.defaultProps = {
   totalCountDh: 3,
   demolitiontime: 0.0,
   totaldryingtime: 118.60,
-  pauses: [{id: 282, created_at: "2023-02-13 08:40:38", why: "Pause 1", user: "ricram1@gmail.com"},
-  {id: 282, created_at: "2023-02-13 13:56:09", why: "Pause 2", user: "ricram1@gmail.com"},
-  {id: 284, created_at: "2023-02-14 08:51:47", why: "Pause 3", user: "ricram1@gmail.com"}],
+  pauses: [{ id: 282, created_at: "2023-02-13 08:40:38", why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non justo commodo, fringilla magna nec, vehicula velit. Aenean sit amet massa egestas.", user: "ricram1@gmail.com" },
+  { id: 282, created_at: "2023-02-13 13:56:09", why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non justo commodo, fringilla magna nec, vehicula velit. Aenean sit amet massa egestas.", user: "ricram1@gmail.com" },
+  ,{ id: 284, created_at: "2023-02-14 08:51:47", why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non justo commodo, fringilla magna nec, vehicula velit. Aenean sit amet massa egestas.", user: "ricram1@gmail.com" }
+  ,{ id: 284, created_at: "2023-02-14 08:51:47", why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non justo commodo, fringilla magna nec, vehicula velit. Aenean sit amet massa egestas.", user: "ricram1@gmail.com" },
+  { id: 284, created_at: "2023-02-14 08:51:47", why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non justo commodo, fringilla magna nec, vehicula velit. Aenean sit amet massa egestas.", user: "ricram1@gmail.com" },
+  { id: 284, created_at: "2023-02-14 08:51:47", why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non justo commodo, fringilla magna nec, vehicula velit. Aenean sit amet massa egestas.", user: "ricram1@gmail.com" },
+  { id: 284, created_at: "2023-02-14 08:51:47", why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non justo commodo, fringilla magna nec, vehicula velit. Aenean sit amet massa HOLA.", user: "ricram1@gmail.com" },
+  { id: 284, created_at: "2023-02-14 08:51:47", why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non justo commodo, fringilla magna nec, vehicula velit. Aenean sit amet massa HOLA.", user: "ricram1@gmail.com" },
+  { id: 284, created_at: "2023-02-14 08:51:47", why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non justo commodo, fringilla magna nec, vehicula velit. Aenean sit amet massa HOLA.", user: "ricram1@gmail.com" },
+  { id: 284, created_at: "2023-02-14 08:51:47", why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non justo commodo, fringilla magna nec, vehicula velit. Aenean sit amet massa HOLA.", user: "ricram1@gmail.com" },
+],
 }
-
+*/
 
 export default App;
