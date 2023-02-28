@@ -114,7 +114,7 @@ function App({
 
       <div className="footer">
         <div className="rcn">Robbie Certificate Number: {robbieCertificateNumber}<br></br>
-        <a href="https://robbier.com"> www.robbiert.com </a>
+        <a href="https://robbiert.com"> www.robbiert.com </a>
         </div>
         <div className="incDetails"> Robbie Restoration Technologies Inc. <br></br>
         <span className="small">1040 Martin Grove Rd Etobicoke, ON, Cananda. </span>
